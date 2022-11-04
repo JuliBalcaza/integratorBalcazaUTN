@@ -1,0 +1,21 @@
+html {
+  padding: 0;
+  margin: 0
+}
+
+;
+
+body {
+  height: 100vh;
+}
+
+footer {
+  height: 60px;
+  width: 100vw;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.517), rgba(152, 152, 152, 0.551));
+  background-image: url(../images/pexels-photo-3408744.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  position: absolute;
+}

@@ -1,0 +1,36 @@
+<div class="container mt-2 text-black bgImg">
+  <div class="row">
+    <form class="container bg-primary col-5 py-4 px-6 col-10 col-md-6 col-lg-6" action="/users/register" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input name="name" type="text" class="form-control" id="name" autocomplete="name" autofocus value="{{formData.name}}">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input name="lastName" type="text" class="form-control" id="lastName" autocomplete="additional-name" value="{{formData.lastName}}">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input name="email" type="text" class="form-control" id="email" autocomplete="email" value="{{formData.email}}">
+      </div>
+      <div class="mb-3">
+        <label for="pass" class="form-label">Password</label>
+        <input name="pass" type="password" class="form-control" id="pass" autocomplete="current-password" value="{{formData.password}}">
+      </div>
+      {{!-- {{message}} --}}
+      {{!-- {{#if message}}
+      <div class="alert alert-danger d-flex align-items-center" role="alert"> --}}
+        {{#each arrWarnings}}
+          <div>
+            <p>{{msg}}</p>
+          </div>
+        {{/each}}
+      {{!-- </div>
+      {{/if}} --}}
+      <div class="d-flex justify-content-between">
+        <input type="submit" class="btn btn-success " value="Register" />
+        <a href="/users/login" class="btn btn-warning">Back to Login</a>
+      </div>
+  </div>
+  </form>
+</div>

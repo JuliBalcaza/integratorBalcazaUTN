@@ -1,0 +1,26 @@
+<div class="container mt-5 text-black">
+  <div class="row">
+    <form class="container col-5 bg-primary py-4 px-6 col-10 col-md-6 col-lg-6" action="/users/login" method="POST">
+      <div class="mb-3">
+        <label for="user" class="form-label">Email</label>
+        <input name="email" type="text" class="form-control" id="email" autocomplete="username" autofocus>
+      </div>
+      <div class="mb-3">
+        <label for="pass" class="form-label">Password</label>
+        <input name="pass" type="password" class="form-control" id="pass" autocomplete="current-password">
+      </div>
+      {{#if message}}
+      <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <div>
+          {{message}}
+        </div>
+      </div>
+      {{/if}}
+      <div class="d-flex justify-content-between">
+        <input type="submit" class="btn btn-success " value="Login" />
+        <a href="/users/register" class="btn btn-dark ">Create your account</a>
+      </div>
+  </div>
+  </form>
+
+</div>
